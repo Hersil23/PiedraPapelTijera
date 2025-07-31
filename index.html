@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" class="transition duration-300">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piedra, Papel, Tijera</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
+</head>
+<body class="bg-blue-500 dark:bg-gray-900 min-h-screen flex items-center justify-center px-4">
+
+  <!-- Contenedor principal -->
+  <div class="w-full max-w-xl bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center space-y-6 text-black dark:text-white">
+
+    <!-- Botón de modo claro/oscuro -->
+    <div class="flex justify-end">
+      <button id="toggleDark" class="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 transition duration-300 font-medium text-base sm:text-lg w-full sm:w-auto">
+        <span id="modeIcon">😎</span>
+        <span>Mode</span>
+      </button>
+    </div>
+
+    <!-- Título -->
+    <h1 class="text-3xl font-bold text-orange-500 dark:text-orange-300">Piedra, Papel, Tijera</h1>
+
+    <!-- Botones del juego -->
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <button id="piedra" class="bg-blue-500 hover:bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg flex-1 transition duration-300">
+        Piedra
+      </button>
+      <button id="papel" class="bg-blue-500 hover:bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg flex-1 transition duration-300">
+        Papel
+      </button>
+      <button id="tijera" class="bg-blue-500 hover:bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg flex-1 transition duration-300">
+        Tijera
+      </button>
+    </div>
+
+    <!-- Resultados -->
+    <div class="text-left space-y-2">
+      <p>Victorias: <span id="wins" class="text-green-600 dark:text-green-400 font-bold">0</span></p>
+      <p>Derrotas: <span id="losses" class="text-red-600 dark:text-red-400 font-bold">0</span></p>
+      <p>Empates: <span id="draws" class="text-yellow-600 dark:text-yellow-400 font-bold">0</span></p>
+    </div>
+
+    <!-- Historial -->
+    <div class="text-left">
+      <h2 class="text-xl font-semibold mb-2 text-orange-500 dark:text-orange-300">Historial de las últimas 5 partidas</h2>
+      <ul id="historyList" class="space-y-2">
+        <!-- Partidas se insertan aquí -->
+      </ul>
+    </div>
+
+  </div>
+
+ 
+
+ 
+  
+</body>
+<script src="./ModeDark.js"></script>
+<script src="./script.js"></script>
+</html>
